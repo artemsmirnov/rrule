@@ -264,4 +264,12 @@ describe('rrulestr', function () {
       datetimeUTC(1998, 12, 31, 9, 0)
     ]
   )
+
+  testRecurring('testTzid',
+    rrulestr(
+      'EXDATE;TZID=Europe/Moscow:20141101T111000,20141108T111000\n' +
+      'RRULE:FREQ=WEEKLY;COUNT=5;BYDAY=SA\n'
+    ),
+    []
+  )
 })
